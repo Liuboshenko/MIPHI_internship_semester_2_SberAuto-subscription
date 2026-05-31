@@ -177,6 +177,22 @@ sovereign@sovereign-pc:~$ curl -X POST http://localhost:8000/predict \
 >       }'
 ```
 
+### 8.0.2 Запустили Streamlit-UI
+
+В **активированном окружении** запускаем веб-приложение — поднимется мини-веб-версия
+интерфейса на http://localhost:8501:
+
+```bash
+source venv3.12/bin/activate
+streamlit run app/app.py
+```
+
+UI вызывает API, а при его недоступности грузит модель локально. Заполняем атрибуты
+визита (`utm_*`, `device_*`, `geo_city`, `visit_*`) и нажимаем «Предсказать» — внизу
+выводится итоговая вероятность конверсии:
+
+![Streamlit-UI СберАвтоподписка: форма ввода атрибутов визита и предсказанная вероятность конверсии](reports/figures/Screenshot_start_app.png)
+
 ### 8.1. Как читать ответ API
 
 ```json

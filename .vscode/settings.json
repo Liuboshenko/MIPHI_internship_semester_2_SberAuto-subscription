@@ -1,0 +1,14 @@
+{
+  // Интерпретатор и kernel для ноутбука/скриптов -- venv проекта (см. README).
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv3.12/bin/python",
+
+  // Чтобы Pylance разрешал локальные пакеты `src` и `api`
+  // (в рантайме путь добавляется через sys.path.insert, но анализатор код не исполняет).
+  "python.analysis.extraPaths": ["."],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoSearchPaths": true,
+
+  // pytest из README
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"]
+}
