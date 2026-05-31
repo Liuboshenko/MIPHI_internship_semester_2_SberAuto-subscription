@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-05-31T16:00:48+00:00",
+  "n": 1860042,
+  "n_target": 50314,
+  "overall_cr": 0.027049926829609224,
+  "social_sources": [
+    "ISrKoXQCxqqYvAZICvjs",
+    "IZEXUFLARCUMynmHNBGo",
+    "MvfHsxITijuriZxsqZqt",
+    "PlbkrSYoHuZBWfYjYnfw",
+    "QxAxdyPLuQMEcrdZWdWb",
+    "gVRrcxiDQubJiljoTbGm"
+  ],
+  "business": {
+    "n_organic": 515659,
+    "cr_organic": 0.04036000535237434,
+    "n_paid": 1344383,
+    "cr_paid": 0.021944639288060026,
+    "n_social": 274227,
+    "cr_social": 0.014663034639185784,
+    "cr_other": 0.029191929701762185,
+    "cr_new": 0.02351583791610994,
+    "cr_returning": 0.037106180986700245
+  },
+  "target_association": {
+    "utm_medium": 0.0671,
+    "device_category": 0.0133,
+    "device_os": 0.0377,
+    "device_browser": 0.0157,
+    "geo_region": 0.0148,
+    "is_organic": 0.0508,
+    "is_social": 0.0317,
+    "is_first_visit": 0.0367,
+    "visit_daypart": 0.013
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "name": "Органика vs платный трафик <-> конверсия",
+      "H0": "CR(органика) = CR(платный)",
+      "H1": "CR различаются",
+      "test": "z-тест долей",
+      "alpha": 0.05,
+      "bonferroni_alpha": 0.0125,
+      "statistic": 69.30003645949785,
+      "pvalue": 0.0,
+      "reject_h0": true,
+      "detail": {
+        "cr_organic": 0.04036000535237434,
+        "cr_paid": 0.021944639288060026,
+        "n_organic": 515659,
+        "n_paid": 1344383
+      }
+    },
+    {
+      "id": "H2",
+      "name": "Тип устройства <-> конверсия",
+      "H0": "CR не зависит от device_category",
+      "H1": "CR зависит от device_category",
+      "test": "χ^2 независимости",
+      "alpha": 0.05,
+      "bonferroni_alpha": 0.0125,
+      "statistic": 331.98589948992753,
+      "pvalue": 8.131635270377443e-73,
+      "dof": 2,
+      "reject_h0": true,
+      "detail": {
+        "cramers_v": 0.0133,
+        "cr_by_device": {
+          "desktop": 0.03138,
+          "mobile": 0.02602,
+          "tablet": 0.02305
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "name": "Новые vs возвратные визиты <-> конверсия",
+      "H0": "CR(visit_number=1) = CR(visit_number>1)",
+      "H1": "CR различаются",
+      "test": "z-тест долей",
+      "alpha": 0.05,
+      "bonferroni_alpha": 0.0125,
+      "statistic": -50.11755859662078,
+      "pvalue": 0.0,
+      "reject_h0": true,
+      "detail": {
+        "cr_new": 0.02351583791610994,
+        "cr_returning": 0.037106180986700245,
+        "n_new": 1376349,
+        "n_returning": 483693
+      }
+    },
+    {
+      "id": "H4",
+      "name": "Соцсети vs прочие источники <-> конверсия",
+      "H0": "CR(соцсети) = CR(прочие)",
+      "H1": "CR различаются",
+      "test": "z-тест долей",
+      "alpha": 0.05,
+      "bonferroni_alpha": 0.0125,
+      "statistic": -43.30362505796128,
+      "pvalue": 0.0,
+      "reject_h0": true,
+      "detail": {
+        "cr_social": 0.014663034639185784,
+        "cr_other": 0.029191929701762185,
+        "n_social": 274227,
+        "n_other": 1585815
+      }
+    }
+  ],
+  "topn_coverage": {
+    "utm_medium": {
+      "cardinality": 55,
+      "top_n": 15,
+      "coverage_pct": 99.36
+    },
+    "utm_source": {
+      "cardinality": 294,
+      "top_n": 20,
+      "coverage_pct": 97.29
+    },
+    "geo_city": {
+      "cardinality": 2548,
+      "top_n": 20,
+      "coverage_pct": 80.93
+    },
+    "device_brand": {
+      "cardinality": 205,
+      "top_n": 15,
+      "coverage_pct": 98.57
+    },
+    "device_browser": {
+      "cardinality": 57,
+      "top_n": 15,
+      "coverage_pct": 99.97
+    },
+    "device_os": {
+      "cardinality": 13,
+      "top_n": 12,
+      "coverage_pct": 100.0
+    }
+  },
+  "figures": [
+    "class_balance.png",
+    "cr_by_utm_medium.png",
+    "cr_organic_vs_paid.png",
+    "cr_by_device_category.png",
+    "cr_social_vs_other.png",
+    "cr_new_vs_returning.png",
+    "cr_by_visit_number_bucket.png",
+    "cr_by_hour.png",
+    "cr_by_dow.png",
+    "cr_by_geo_region.png",
+    "visit_number_distribution.png",
+    "top_utm_source.png",
+    "cramers_v_heatmap.png"
+  ]
+}

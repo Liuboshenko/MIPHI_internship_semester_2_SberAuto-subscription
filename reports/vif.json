@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-05-31T13:27:17+00:00",
+  "threshold": 10.0,
+  "vif": {
+    "visit_hour": 1.0037,
+    "visit_day": 1.0132,
+    "visit_number_log": 2.2174,
+    "is_weekend": 1.0132,
+    "is_organic": 1.3672,
+    "is_social": 1.1694,
+    "is_first_visit": 2.2438,
+    "has_utm_campaign": 2.0885,
+    "has_utm_keyword": 1.0823,
+    "has_utm_adcontent": 2.1954,
+    "is_russia": 1.1404,
+    "is_moscow": 1.2914,
+    "is_spb": 1.2442,
+    "screen_w": 1.6441,
+    "screen_h": 1.6597,
+    "screen_is_valid": 1.0002
+  },
+  "flagged": [],
+  "dropped_by_design": [
+    {
+      "name": "is_paid",
+      "reason": "= 1 − is_organic (идеальная коллинеарность)"
+    },
+    {
+      "name": "is_mobile",
+      "reason": "поглощается OHE(device_category)"
+    },
+    {
+      "name": "screen_area",
+      "reason": "= screen_w · screen_h (определённая коллинеарность)"
+    },
+    {
+      "name": "screen_aspect",
+      "reason": "= screen_w / screen_h: VIF>10 (инфляция screen_w) -> исключён"
+    },
+    {
+      "name": "geo_country",
+      "reason": "кардинальность 166; заменён бинарным is_russia"
+    },
+    {
+      "name": "device_model",
+      "reason": "удалён в фазе 02 (99.12% NaN)"
+    }
+  ]
+}

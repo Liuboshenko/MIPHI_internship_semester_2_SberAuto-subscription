@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-05-31T15:04:35+00:00",
+  "main_metric": "roc_auc",
+  "acceptance": {
+    "roc_auc_threshold": 0.65,
+    "passed": true
+  },
+  "comparison": {
+    "dummy_prior": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.02705,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 361946,
+        "fp": 0,
+        "fn": 10063,
+        "tp": 0
+      }
+    },
+    "logreg_base": {
+      "roc_auc": 0.61208,
+      "pr_auc": 0.039,
+      "f1": 0.0644,
+      "precision": 0.03367,
+      "recall": 0.73835,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 148682,
+        "fp": 213264,
+        "fn": 2633,
+        "tp": 7430
+      }
+    },
+    "logreg_full": {
+      "roc_auc": 0.68752,
+      "pr_auc": 0.05822,
+      "f1": 0.08229,
+      "precision": 0.04383,
+      "recall": 0.67177,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 214464,
+        "fp": 147482,
+        "fn": 3303,
+        "tp": 6760
+      }
+    },
+    "random_forest": {
+      "roc_auc": 0.70016,
+      "pr_auc": 0.06327,
+      "f1": 0.08636,
+      "precision": 0.04624,
+      "recall": 0.65189,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 226642,
+        "fp": 135304,
+        "fn": 3503,
+        "tp": 6560
+      }
+    },
+    "catboost": {
+      "roc_auc": 0.71262,
+      "pr_auc": 0.07174,
+      "f1": 0.08963,
+      "precision": 0.04803,
+      "recall": 0.66908,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 228498,
+        "fp": 133448,
+        "fn": 3330,
+        "tp": 6733
+      }
+    },
+    "catboost_final": {
+      "roc_auc": 0.71306,
+      "pr_auc": 0.07216,
+      "f1": 0.12584,
+      "precision": 0.08477,
+      "recall": 0.24406,
+      "threshold": 0.67806,
+      "confusion": {
+        "tn": 335430,
+        "fp": 26516,
+        "fn": 7607,
+        "tp": 2456
+      }
+    }
+  },
+  "final_model": "catboost_final",
+  "threshold": 0.67806,
+  "catboost_importance": {
+    "screen_w": 9.4498,
+    "screen_h": 9.2432,
+    "utm_source": 8.8809,
+    "utm_campaign": 7.7344,
+    "visit_month": 6.7897,
+    "visit_day": 5.6058,
+    "utm_adcontent": 5.444,
+    "visit_number_log": 5.0962,
+    "device_brand": 4.8641,
+    "utm_medium": 4.3378,
+    "is_organic": 4.074,
+    "visit_hour": 3.8966,
+    "has_utm_keyword": 2.801,
+    "device_browser": 2.5783,
+    "device_os": 2.3569,
+    "has_utm_campaign": 2.2363,
+    "is_social": 2.1945,
+    "device_category": 1.7389,
+    "geo_city": 1.7379,
+    "is_russia": 1.4505,
+    "has_utm_adcontent": 1.309,
+    "utm_keyword": 1.2469,
+    "visit_daypart": 1.1389,
+    "visit_dow": 1.1243,
+    "is_moscow": 1.06,
+    "is_first_visit": 0.8924,
+    "is_spb": 0.4636,
+    "is_weekend": 0.2542,
+    "screen_is_valid": 0.0
+  },
+  "permutation_importance_raw_fields": {
+    "utm_medium": 0.0856,
+    "visit_date": 0.08007,
+    "utm_campaign": 0.04415,
+    "utm_source": 0.04359,
+    "device_screen_resolution": 0.04107,
+    "utm_adcontent": 0.03325,
+    "visit_number": 0.02652,
+    "device_brand": 0.02151,
+    "device_os": 0.01238,
+    "visit_time": 0.01139,
+    "geo_city": 0.01003,
+    "utm_keyword": 0.00888,
+    "device_category": 0.00822,
+    "device_browser": 0.0061,
+    "geo_country": 0.00177
+  },
+  "figures": [
+    "roc_pr_curves.png",
+    "confusion_matrix.png",
+    "calibration_curve.png",
+    "catboost_feature_importance.png",
+    "shap_summary.png"
+  ]
+}
