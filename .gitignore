@@ -26,3 +26,6 @@ todo
 doc
 
 notebooks/analytical_report.ipynb.bak
+
+# --- Локальные настройки редактора (не относятся к проекту) ---
+.vscode/
