@@ -144,7 +144,7 @@ python3 -m pytest tests/ -v
 ├── data/        interim/, processed/
 ├── reports/     figures/, *_report.md, *_findings.md, *.json
 ├── tests/       test_0{1..6}_*.py
-├── notebooks/   analytical_report.ipynb
+├── notebooks/   Liuboshenko_analytical_report.ipynb
 └── requirements.txt
 ```
 
